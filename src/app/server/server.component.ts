@@ -9,10 +9,6 @@ import { Component } from '@angular/core';
       color: white;
     }
 
-    .offline {
-      color: yellow;
-    }
-
     h4 {
       line-height: 2rem;
       width:30vw;

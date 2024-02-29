@@ -2,10 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
-  template: `
-    <app-server></app-server>
-    <!-- <app-server></app-server> -->
-  `,
+  templateUrl: './servers.component.html',
   styleUrl: './servers.component.css',
 })
-export class ServersComponent {}
+export class ServersComponent {
+  allowNewServer = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 3000);
+  }
+
+  ngOnInit() {}
+}

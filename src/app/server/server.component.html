@@ -1,11 +1,15 @@
-<h3>
-  Server with ID {{ serverId }} is
+<h4>
+  Server with ID {{ getServerId() }} is
   <p
     [ngStyle]="{
-      color: getServerStatus() === 'offline' ? 'red' : 'green',
-      display: 'inline'
+      backgroundColor: getColor(),
+      display: 'inline',
+    }"
+    [ngClass]="{
+      online: serverStatus === 'online',
+      offline: serverStatus === 'offline'
     }"
   >
     {{ getServerStatus() }}
   </p>
-</h3>
+</h4>
